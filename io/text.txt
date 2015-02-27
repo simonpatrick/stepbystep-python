@@ -1,0 +1,8 @@
+this is sample string(lp0
+S'this'
+p1
+aS'is'
+p2
+aI4
+aI13327
+a.
