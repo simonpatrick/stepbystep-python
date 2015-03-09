@@ -16,6 +16,7 @@ app.add_url_rule('uploads/<file_name>','upload_file',build_only=True)
 app.wsgi_app = SharedDataMiddleware(app.wsgi_app,{
     '/uploads': app.config['UPLOAD_FOLDER']
 })
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024*1024
 
 def allowed_file(file_name):
     return '.' in file_name and \
