@@ -67,3 +67,4 @@ build/
 include/
 lib/
 .python
+*.pyc
