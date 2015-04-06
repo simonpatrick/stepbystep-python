@@ -1,0 +1,2543 @@
+/usr/sbin/mysqld, Version: 5.6.20-68.0-56-log (Percona XtraDB Cluster (GPL), Release 25.7, wsrep_25.7.r4126). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 140929 16:58:29
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    19
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.048424  Lock_time: 0.048090  Rows_sent: 1  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 811
+use db_nonobank;
+SET timestamp=1411981109;
+SELECT s_name,s_keywords,s_des,s_mix_bid,s_checkcode_enbale,s_fraud_times FROM sites;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    19
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.006886  Lock_time: 0.006505  Rows_sent: 23  Rows_examined: 57  Rows_affected: 0
+# Bytes_sent: 1142
+SET timestamp=1411981109;
+SELECT links_url,links_name FROM links WHERE cat_id = 0 ORDER BY sort ASC;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    19
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000501  Lock_time: 0.000199  Rows_sent: 7  Rows_examined: 41  Rows_affected: 0
+# Bytes_sent: 395
+SET timestamp=1411981109;
+SELECT links_url,links_name FROM links WHERE cat_id = 2 ORDER BY sort ASC;
+# Time: 140929 16:58:38
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    19
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 9.410719  Lock_time: 0.021218  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 511
+SET timestamp=1411981118;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    22
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 3.711017  Lock_time: 0.002361  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 487
+SET timestamp=1411981118;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:58:41
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    25
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.020649  Lock_time: 0.020259  Rows_sent: 166  Rows_examined: 166  Rows_affected: 0
+# Bytes_sent: 11781
+SET timestamp=1411981121;
+SELECT * FROM admin_menus WHERE available=1;
+# Time: 140929 16:58:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    26
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.532975  Lock_time: 0.001584  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 506
+SET timestamp=1411981123;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    27
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.538776  Lock_time: 0.000447  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 514
+SET timestamp=1411981123;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:58:52
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    32
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.482106  Lock_time: 0.000534  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 498
+SET timestamp=1411981132;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:58:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    34
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.451139  Lock_time: 0.019544  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 509
+SET timestamp=1411981139;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    35
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.375461  Lock_time: 0.000759  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 513
+SET timestamp=1411981139;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    38
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.625155  Lock_time: 0.008156  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 493
+SET timestamp=1411981147;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    43
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.513038  Lock_time: 0.000464  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 505
+SET timestamp=1411981155;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:20
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    45
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.001179  Lock_time: 0.000856  Rows_sent: 1  Rows_examined: 17  Rows_affected: 0
+# Bytes_sent: 64
+SET timestamp=1411981160;
+SELECT max(allow_time) allow_time FROM `admin_ip_blacklist` WHERE `ip`='192.168.30.85' and `m_id`='0';
+# Time: 140929 16:59:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    45
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.571045  Lock_time: 0.000314  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 516
+SET timestamp=1411981161;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    47
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.433740  Lock_time: 0.000510  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 540
+SET timestamp=1411981163;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    49
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.358125  Lock_time: 0.000893  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 508
+SET timestamp=1411981171;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    51
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.423398  Lock_time: 0.001552  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 498
+SET timestamp=1411981179;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    57
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.601930  Lock_time: 0.001301  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 508
+SET timestamp=1411981187;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    58
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.371441  Lock_time: 0.000807  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 503
+SET timestamp=1411981191;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 16:59:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    60
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.390936  Lock_time: 0.001146  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 508
+SET timestamp=1411981195;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:00:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    61
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.546728  Lock_time: 0.001057  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 502
+SET timestamp=1411981203;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:00:11
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    64
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.607475  Lock_time: 0.001327  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 508
+SET timestamp=1411981211;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:00:13
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    65
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.002076  Lock_time: 0.001526  Rows_sent: 1  Rows_examined: 17  Rows_affected: 0
+# Bytes_sent: 64
+SET timestamp=1411981213;
+SELECT max(allow_time) allow_time FROM `admin_ip_blacklist` WHERE `ip`='192.168.21.200' and `m_id`='0';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    65
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.059875  Lock_time: 0.026481  Rows_sent: 4  Rows_examined: 24  Rows_affected: 0
+# Bytes_sent: 250
+SET timestamp=1411981213;
+SELECT id,name FROM home_indeppage WHERE enable=1 AND homenav=1 ORDER BY sort,id;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    65
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000386  Lock_time: 0.000255  Rows_sent: 1  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 114
+SET timestamp=1411981213;
+SELECT site_blacklist_show FROM sites LIMIT 1;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    65
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.196414  Lock_time: 0.001291  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411981213;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:00:13'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:00:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    65
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.213871  Lock_time: 0.001516  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411981215;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:00:13'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:00:28
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    68
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.519102  Lock_time: 0.001307  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 504
+SET timestamp=1411981228;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:00:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    71
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.566429  Lock_time: 0.021324  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 509
+SET timestamp=1411981251;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:01:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    74
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.413281  Lock_time: 0.000326  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 535
+SET timestamp=1411981267;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:01:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    76
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.347990  Lock_time: 0.000327  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 529
+SET timestamp=1411981275;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:01:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    78
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.423142  Lock_time: 0.001038  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 511
+SET timestamp=1411981283;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:01:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    80
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.544666  Lock_time: 0.000399  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 502
+SET timestamp=1411981291;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:01:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    82
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.349223  Lock_time: 0.000312  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 496
+SET timestamp=1411981299;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:01:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    84
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.023292  Lock_time: 0.001346  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411981303;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:01:43'  ORDER BY vf_service_time DESC;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    84
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.178819  Lock_time: 0.000568  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411981303;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:01:43'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:01:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    85
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.521179  Lock_time: 0.000630  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 519
+SET timestamp=1411981307;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:01:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    87
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.414269  Lock_time: 0.001122  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411981315;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:02:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    88
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.506991  Lock_time: 0.000300  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 504
+SET timestamp=1411981323;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:04:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.230354  Lock_time: 0.099868  Rows_sent: 1  Rows_examined: 21233  Rows_affected: 0
+# Bytes_sent: 65
+SET timestamp=1411981455;
+SELECT count(0) FROM borrows_archive ba      LEFT JOIN borrows b ON ba.bo_id=b.bo_id      LEFT JOIN borrows_prepare bp ON bp.bp_id=b.bp_id     LEFT JOIN products p ON p.p_id=bp.p_id     LEFT JOIN members m ON m.m_id=b.m_id     LEFT JOIN admin am ON am.am_id=ba.am_op_id     LEFT JOIN members_field_details mfd ON mfd.m_id = m.m_id      WHERE keyword='borrow_video_audit'  AND ba.is_confirm = 3  ORDER BY (CASE WHEN p_borrow_type='名校贷应急包'THEN 0 ELSE 1 END),update_time DESC ,bo_finish_time;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.044675  Lock_time: 0.000868  Rows_sent: 15  Rows_examined: 21386  Rows_affected: 0
+# Bytes_sent: 7818
+SET timestamp=1411981455;
+SELECT b.bo_extno,b.bo_id,FROM_UNIXTIME(publish_time) publish_time, 
+				FROM_UNIXTIME(bo_finish_time) as bo_finish_date, b.m_id,p.p_borrow_type,
+				m.m_username,m.m_borrow_type,mfd.realname,mfd.mobilenum,mfd.sex,mfd.cur_province,mfd.cur_city,mfd.institution,ba.*,
+				am.am_id,am.am_name am_op_name FROM borrows_archive ba 
+				LEFT JOIN borrows b ON ba.bo_id=b.bo_id 
+				LEFT JOIN borrows_prepare bp ON bp.bp_id=b.bp_id
+				LEFT JOIN products p ON p.p_id=bp.p_id
+				LEFT JOIN members m ON m.m_id=b.m_id
+				LEFT JOIN admin am ON am.am_id=ba.am_op_id
+				LEFT JOIN members_field_details mfd ON mfd.m_id = m.m_id 
+				WHERE keyword='borrow_video_audit'  AND ba.is_confirm = 3  ORDER BY (CASE WHEN p_borrow_type='名校贷应急包'THEN 0 ELSE 1 END),update_time DESC ,bo_finish_time  limit 0,15;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.017701  Lock_time: 0.014850  Rows_sent: 6  Rows_examined: 634  Rows_affected: 0
+# Bytes_sent: 3952
+SET timestamp=1411981455;
+SELECT a.* FROM admin a left join admin_department ad on a.ad_id=ad.ad_id 
+		 where (0  or a.am_roles like '%|3|%' or a.am_roles like '%|2|%') and a.am_deleted = 0;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.002975  Lock_time: 0.000280  Rows_sent: 42  Rows_examined: 670  Rows_affected: 0
+# Bytes_sent: 15125
+SET timestamp=1411981455;
+SELECT a.* FROM admin a left join admin_department ad on a.ad_id=ad.ad_id 
+		 where (0  or a.am_roles like '%|74|%' or a.am_roles like '%|75|%') and a.am_deleted = 0;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000338  Lock_time: 0.000213  Rows_sent: 0  Rows_examined: 35  Rows_affected: 0
+# Bytes_sent: 102
+SET timestamp=1411981455;
+select am_id from admin_department where ad_name='名校贷' and am_id='5';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000214  Lock_time: 0.000101  Rows_sent: 1  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 112
+SET timestamp=1411981455;
+SELECT student_max_apply FROM sites LIMIT 1;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000214  Lock_time: 0.000082  Rows_sent: 1  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 116
+SET timestamp=1411981455;
+SELECT student_1m_max_apply FROM sites LIMIT 1;
+# Time: 140929 17:04:17
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 1.442197  Lock_time: 0.000542  Rows_sent: 1  Rows_examined: 27666  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411981457;
+SELECT COUNT(0) FROM (SELECT COUNT(0) FROM borrows_prepare bp 
+				LEFT JOIN products p on bp.p_id =p.p_id 
+				WHERE p.p_type=3 AND bp.bp_is_success in(0,1)
+				
+				 AND bp.bp_publish_time >= DATE_FORMAT(NOW(),'%Y-%m-%d 12:00:00') AND bp.bp_publish_time < DATE_FORMAT(DATE_ADD(NOW(),INTERVAL 1 DAY),'%Y-%m-%d 12:00:00') GROUP BY bp.m_id)T;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.010010  Lock_time: 0.001673  Rows_sent: 1  Rows_examined: 891  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411981457;
+SELECT COUNT(0) FROM (SELECT COUNT(0) FROM borrows_prepare bp 
+				LEFT JOIN products p on bp.p_id =p.p_id 
+				WHERE p.p_type=3 AND bp.bp_is_success in(0,1)
+				 AND bp.p_id ='83'
+				 AND bp.bp_publish_time >='2014-09-29 17:00:00' AND bp.bp_publish_time < '2014-09-29 18:00:00' GROUP BY bp.m_id)T;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.016659  Lock_time: 0.015566  Rows_sent: 31  Rows_examined: 415  Rows_affected: 0
+# Bytes_sent: 1103
+SET timestamp=1411981457;
+select region_id, province_name, province_code 
+				from  euto_region_n  
+				GROUP BY province_code;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.006382  Lock_time: 0.001159  Rows_sent: 0  Rows_examined: 1214  Rows_affected: 0
+# Bytes_sent: 606
+SET timestamp=1411981457;
+select * 
+				from student_schoole 
+				where ss_enable=1 and ss_address=NULL 
+				order by CONVERT(ss_name USING gbk) ASC;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000198  Lock_time: 0.000104  Rows_sent: 1  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 126
+SET timestamp=1411981457;
+SELECT student_loan_max_money FROM sites LIMIT 1;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   106
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.095822  Lock_time: 0.000333  Rows_sent: 1  Rows_examined: 27663  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411981457;
+SELECT SUM(bp_price_audit) price FROM borrows_prepare bp
+				LEFT JOIN products p on bp.p_id =p.p_id 
+				WHERE p.p_type=3 AND bp.bp_is_success in(0,1)
+				AND bp.bp_publish_time > DATE_FORMAT(NOW(),'%Y-%m-%d 12:00:00')
+				AND bp.bp_publish_time < DATE_FORMAT(DATE_ADD(NOW(),INTERVAL 1 DAY),'%Y-%m-%d 12:00:00');
+# Time: 140929 17:04:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   109
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.038130  Lock_time: 0.034907  Rows_sent: 1  Rows_examined: 3465  Rows_affected: 0
+# Bytes_sent: 160
+SET timestamp=1411981459;
+select cou_address from county_idnum_list where cou_idnum_part = '450111';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   109
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.030023  Lock_time: 0.000889  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981459;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='857319' AND mdc2.value='15177323801'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='857319' AND mfd.mobilenum='15177323801' GROUP BY realname);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   109
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.001918  Lock_time: 0.000850  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981459;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='857319' AND mdc2.value='13878130090'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='857319' AND mfd.mobilenum='13878130090' GROUP BY realname);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   109
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.001718  Lock_time: 0.000836  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981459;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='857319' AND mdc2.value='15577372905'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='857319' AND mfd.mobilenum='15577372905' GROUP BY realname);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   109
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.001599  Lock_time: 0.000712  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981459;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='857319' AND mdc2.value='15676310838'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='857319' AND mfd.mobilenum='15676310838' GROUP BY realname);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   109
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.001781  Lock_time: 0.000450  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981459;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='857319' AND mdc2.value='13977382271'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='857319' AND mfd.mobilenum='13977382271' GROUP BY realname);
+# Time: 140929 17:04:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   115
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.023310  Lock_time: 0.001116  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411981483;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:04:43'  ORDER BY vf_service_time DESC;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   115
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.184093  Lock_time: 0.000668  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411981483;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:04:43'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:04:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   119
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.002792  Lock_time: 0.000187  Rows_sent: 1  Rows_examined: 3465  Rows_affected: 0
+# Bytes_sent: 148
+SET timestamp=1411981499;
+select cou_address from county_idnum_list where cou_idnum_part = '360425';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   119
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.002239  Lock_time: 0.000970  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981499;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='863712' AND mdc2.value='13576038860'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='863712' AND mfd.mobilenum='13576038860' GROUP BY realname);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   119
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.001902  Lock_time: 0.000783  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981499;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='863712' AND mdc2.value='18770258090'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='863712' AND mfd.mobilenum='18770258090' GROUP BY realname);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   119
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.002148  Lock_time: 0.000885  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981499;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='863712' AND mdc2.value='18702655158'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='863712' AND mfd.mobilenum='18702655158' GROUP BY realname);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   119
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.001434  Lock_time: 0.000627  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981499;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='863712' AND mdc2.value='18179434227'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='863712' AND mfd.mobilenum='18179434227' GROUP BY realname);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   119
+# Schema: db_nonobank  Last_errno: 1052  Killed: 0
+# Query_time: 0.001606  Lock_time: 0.000682  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 183
+SET timestamp=1411981499;
+(SELECT mfd.realname owener,mdc1.groupkwd, mdc1.value realname,mdc2.value mobile FROM members_dunning_contact mdc1 
+						LEFT JOIN members_dunning_contact mdc2 ON mdc1.m_id=mdc2.m_id AND mdc1.groupkwd=mdc2.groupkwd  
+						LEFT JOIN members_field_details mfd ON mfd.m_id = mdc1.m_id 
+						WHERE mdc1.m_id  !='863712' AND mdc2.value='13340183861'  AND mdc1.kind=1 
+						AND mdc2.kind=2 AND mdc2.m_id IS NOT NULL GROUP BY realname) UNION 
+						(SELECT mfd.realname owener,NULL groupkwd, NULL realname,mfd.mobilenum FROM members_field_details mfd 
+						WHERE mfd.m_id  !='863712' AND mfd.mobilenum='13340183861' GROUP BY realname);
+# Time: 140929 17:05:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   121
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.368774  Lock_time: 0.000221  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 521
+SET timestamp=1411981507;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:05:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   126
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.569742  Lock_time: 0.004627  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 519
+SET timestamp=1411981523;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:05:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   128
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.578630  Lock_time: 0.000462  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 535
+SET timestamp=1411981539;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:05:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   131
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.619190  Lock_time: 0.000368  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 522
+SET timestamp=1411981555;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:06:11
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   133
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.553140  Lock_time: 0.001502  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 503
+SET timestamp=1411981571;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:06:27
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   137
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.467255  Lock_time: 0.000406  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 496
+SET timestamp=1411981587;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:06:35
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   139
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.396258  Lock_time: 0.000978  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 528
+SET timestamp=1411981595;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:06:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   141
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.471184  Lock_time: 0.000290  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 519
+SET timestamp=1411981603;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:06:50
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   143
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.005833  Lock_time: 0.005071  Rows_sent: 1  Rows_examined: 17  Rows_affected: 0
+# Bytes_sent: 64
+SET timestamp=1411981610;
+SELECT max(allow_time) allow_time FROM `admin_ip_blacklist` WHERE `ip`='192.168.22.162' and `m_id`='0';
+# Time: 140929 17:06:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   143
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.590308  Lock_time: 0.000383  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 516
+SET timestamp=1411981611;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:06:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   145
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.481169  Lock_time: 0.000353  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 516
+SET timestamp=1411981619;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:07:01
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   146
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.003307  Lock_time: 0.002924  Rows_sent: 5  Rows_examined: 5  Rows_affected: 0
+# Bytes_sent: 914
+SET timestamp=1411981621;
+SELECT * FROM `user_story` LIMIT 0, 1000;
+# Time: 140929 17:07:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   149
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.414381  Lock_time: 0.000305  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 498
+SET timestamp=1411981627;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:07:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   151
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.430971  Lock_time: 0.001407  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 497
+SET timestamp=1411981635;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:07:16
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   154
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.001601  Lock_time: 0.000382  Rows_sent: 711  Rows_examined: 711  Rows_affected: 0
+# Bytes_sent: 15746
+SET timestamp=1411981636;
+SELECT * FROM `members2` LIMIT 0, 1000;
+# Time: 140929 17:07:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   157
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.392412  Lock_time: 0.001896  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 527
+SET timestamp=1411981643;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:07:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   160
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.587380  Lock_time: 0.009481  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 489
+SET timestamp=1411981651;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:07:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   162
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.598702  Lock_time: 0.001288  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 533
+SET timestamp=1411981659;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:07:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   165
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.002193  Lock_time: 0.001708  Rows_sent: 1  Rows_examined: 17  Rows_affected: 0
+# Bytes_sent: 64
+SET timestamp=1411981663;
+SELECT max(allow_time) allow_time FROM `admin_ip_blacklist` WHERE `ip`='192.168.1.168' and `m_id`='0';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   165
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.031165  Lock_time: 0.030736  Rows_sent: 1  Rows_examined: 2  Rows_affected: 0
+# Bytes_sent: 610
+SET timestamp=1411981663;
+SELECT * FROM site_ads where available = 1 and keyword = 'login';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   168
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.409752  Lock_time: 0.027520  Rows_sent: 6  Rows_examined: 451  Rows_affected: 0
+# Bytes_sent: 697
+SET timestamp=1411981663;
+SELECT arc_id,arc_title,TIME, is_new FROM articles 
+					WHERE arc_id AND is_index = 1 AND show_device IN (1,3) AND cat_id IN 
+					(SELECT cat_id FROM articles_cat WHERE parent_id IN (17,30)) 
+					ORDER BY is_top DESC, arc_sort, TIME DESC LIMIT 6;
+# Time: 140929 17:07:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   171
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.649582  Lock_time: 0.000448  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 526
+SET timestamp=1411981667;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   168
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 3.706239  Lock_time: 0.012098  Rows_sent: 3  Rows_examined: 28901  Rows_affected: 0
+# Bytes_sent: 324
+SET timestamp=1411981667;
+SELECT m.m_username,COUNT(va.fp_id) fp_count, SUM(va_amount) totalpayed ,SUM(va_amount*(fp.fp_rate_min+fp.fp_rate_max)/2/100*(fp.fp_expect/12)) earings
+				FROM vip_account va 
+				LEFT JOIN finance_plan fp ON fp.fp_id=va.fp_id
+				LEFT JOIN members m ON va.m_id=m.m_id
+				WHERE va.fp_id IS NOT NULL AND va.va_amount>0  GROUP BY m.m_id 
+				ORDER BY totalpayed DESC  LIMIT 3;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   168
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.001482  Lock_time: 0.001107  Rows_sent: 5  Rows_examined: 66  Rows_affected: 0
+# Bytes_sent: 1653
+SET timestamp=1411981667;
+select * from site_flash_setting 
+					where position ='首页幻灯' and enabled = 1 
+					order by sort,create_date;
+# Time: 140929 17:07:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   172
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.436110  Lock_time: 0.001249  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 509
+SET timestamp=1411981671;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:07:52
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   174
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.267476  Lock_time: 0.001655  Rows_sent: 1  Rows_examined: 96711  Rows_affected: 0
+# Bytes_sent: 546
+SET timestamp=1411981672;
+SELECT * FROM user_login WHERE ul_login_field='zenpax';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   174
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.029868  Lock_time: 0.028539  Rows_sent: 1  Rows_examined: 1107  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411981672;
+SELECT count(0) FROM `admin_sale_approach` where m_id='433324';
+# Time: 140929 17:07:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   176
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.678192  Lock_time: 0.000610  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 530
+SET timestamp=1411981675;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:07:56
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   177
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.149306  Lock_time: 0.000362  Rows_sent: 1  Rows_examined: 91  Rows_affected: 0
+# Bytes_sent: 59
+SET timestamp=1411981676;
+SELECT SUM(ba.ba_price_b) total
+				FROM (SELECT bb.bo_id,bb.m_b_id,SUM(bb.bi_price_in) bi_price_in FROM borrows_bidding bb 
+				WHERE bb.m_b_id ='433324' AND bb.is_vip=0 AND bb.bi_state IN(1,2) GROUP BY bb.bo_id)t 
+				LEFT JOIN borrows_accept ba ON ba.bo_id=t.bo_id AND ba.m_id=t.m_b_id
+				LEFT JOIN borrows b ON b.bo_id=t.bo_id
+				WHERE b.bo_is_success=1  AND ba.ba_is_pay=0 AND ba.is_vip=0;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   177
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.001397  Lock_time: 0.000502  Rows_sent: 1  Rows_examined: 91  Rows_affected: 0
+# Bytes_sent: 58
+SET timestamp=1411981676;
+SELECT SUM(t.bi_price_in*t.bi_rate)/SUM(t.bi_price_in) rate 
+	 	FROM (SELECT bb.bo_id,bb.m_b_id,SUM(bb.bi_price_in) bi_price_in, bi_rate FROM borrows_bidding bb 
+		WHERE bb.m_b_id ='433324' AND bb.is_vip=0 AND bb.bi_state IN(1,2) GROUP BY bb.bo_id)t 
+		LEFT JOIN borrows_accept ba ON ba.bo_id=t.bo_id AND ba.m_id=t.m_b_id
+		LEFT JOIN borrows b ON b.bo_id=t.bo_id
+		WHERE b.bo_is_success=1  AND ba.ba_is_pay=0;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   177
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.062594  Lock_time: 0.033430  Rows_sent: 1  Rows_examined: 1461  Rows_affected: 0
+# Bytes_sent: 78
+SET timestamp=1411981676;
+SELECT AVG(wd_interest) FROM work_date wd WHERE wd_interest IS NOT NULL;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   177
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.621710  Lock_time: 0.001260  Rows_sent: 1  Rows_examined: 139591  Rows_affected: 0
+# Bytes_sent: 71
+SET timestamp=1411981676;
+SELECT IFNULL(SUM(income_coin-expend_coin),0) total_sum FROM nonocoin_log WHERE m_id='433324';
+# Time: 140929 17:08:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   179
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.427699  Lock_time: 0.001496  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 517
+SET timestamp=1411981683;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   180
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.545104  Lock_time: 0.000322  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 516
+SET timestamp=1411981683;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:08:11
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   183
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.586568  Lock_time: 0.001368  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 503
+SET timestamp=1411981691;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   184
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.699983  Lock_time: 0.011548  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 510
+SET timestamp=1411981691;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:08:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   189
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.430736  Lock_time: 0.001134  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 496
+SET timestamp=1411981699;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:08:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   190
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.573918  Lock_time: 0.001641  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 492
+SET timestamp=1411981701;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:08:27
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   192
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.614208  Lock_time: 0.001187  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 525
+SET timestamp=1411981707;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:08:29
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   194
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.013069  Lock_time: 0.012725  Rows_sent: 25  Rows_examined: 64  Rows_affected: 0
+# Bytes_sent: 3059
+SET timestamp=1411981709;
+select * from admin_menu_modules where pc_id = '1';
+# Time: 140929 17:08:35
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   196
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.607845  Lock_time: 0.001701  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 501
+SET timestamp=1411981715;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:08:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   199
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.564616  Lock_time: 0.005331  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 521
+SET timestamp=1411981723;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:08:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   201
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.573529  Lock_time: 0.001217  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 512
+SET timestamp=1411981731;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:08:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   203
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.599221  Lock_time: 0.001441  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 533
+SET timestamp=1411981739;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:09:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   206
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.393129  Lock_time: 0.000510  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 503
+SET timestamp=1411981747;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:09:13
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   207
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.027650  Lock_time: 0.001590  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411981753;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:09:13'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:09:14
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   207
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.218130  Lock_time: 0.000385  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411981754;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:09:13'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:09:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   208
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.526295  Lock_time: 0.001095  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 502
+SET timestamp=1411981755;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:09:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   210
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.564546  Lock_time: 0.001101  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 509
+SET timestamp=1411981763;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:09:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   212
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.414389  Lock_time: 0.000432  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 510
+SET timestamp=1411981771;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:09:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   213
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.517292  Lock_time: 0.010776  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 521
+SET timestamp=1411981779;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:09:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   215
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.588364  Lock_time: 0.000481  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 491
+SET timestamp=1411981787;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:09:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   217
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.537966  Lock_time: 0.000423  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 501
+SET timestamp=1411981795;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:10:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   218
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.548743  Lock_time: 0.002499  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 523
+SET timestamp=1411981803;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:10:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   221
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.373532  Lock_time: 0.005648  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 521
+SET timestamp=1411981819;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:10:35
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   223
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.486032  Lock_time: 0.000482  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 527
+SET timestamp=1411981835;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:10:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   225
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.018361  Lock_time: 0.001208  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411981843;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:10:43'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:10:44
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   225
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.124018  Lock_time: 0.000366  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411981844;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:10:43'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:11:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   231
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.423595  Lock_time: 0.001417  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 500
+SET timestamp=1411981907;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:12:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   233
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.576001  Lock_time: 0.000462  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 506
+SET timestamp=1411981923;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:12:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   237
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.552660  Lock_time: 0.003526  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 525
+SET timestamp=1411981939;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:12:27
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   238
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.583821  Lock_time: 0.000449  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 502
+SET timestamp=1411981947;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:12:35
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   240
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.562105  Lock_time: 0.001164  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 508
+SET timestamp=1411981955;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:12:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   244
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.574668  Lock_time: 0.003152  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 506
+SET timestamp=1411981971;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:13:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   251
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.481193  Lock_time: 0.000996  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 524
+SET timestamp=1411981995;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:13:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   254
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.581714  Lock_time: 0.001233  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 507
+SET timestamp=1411982001;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:13:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   255
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.400267  Lock_time: 0.001442  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 495
+SET timestamp=1411982003;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:13:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   259
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.417550  Lock_time: 0.001413  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 517
+SET timestamp=1411982011;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:13:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   261
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.407401  Lock_time: 0.001176  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 512
+SET timestamp=1411982019;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:13:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   264
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.017372  Lock_time: 0.001164  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411982023;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:13:43'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:13:44
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   264
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.140193  Lock_time: 0.000545  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411982024;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:13:43'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:13:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   265
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.609636  Lock_time: 0.000358  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 523
+SET timestamp=1411982027;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:13:52
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   267
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.270200  Lock_time: 0.000147  Rows_sent: 1  Rows_examined: 56512  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982032;
+SELECT count(0) FROM borrows_prepare bp where (bp_is_success in(0,4) ) and m_id = '864197';
+# Time: 140929 17:13:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   269
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.627055  Lock_time: 0.004278  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 529
+SET timestamp=1411982035;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:14:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   280
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.414795  Lock_time: 0.005215  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 510
+SET timestamp=1411982059;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:14:27
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   281
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.385480  Lock_time: 0.001322  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 532
+SET timestamp=1411982067;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:14:35
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   285
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.532246  Lock_time: 0.008587  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 504
+SET timestamp=1411982075;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:14:45
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   264
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.210399  Lock_time: 0.000532  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411982085;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:13:43'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:14:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   291
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.380300  Lock_time: 0.000364  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 540
+SET timestamp=1411982099;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:15:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   293
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.379797  Lock_time: 0.001094  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 529
+SET timestamp=1411982107;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:15:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   295
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.454015  Lock_time: 0.001017  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 500
+SET timestamp=1411982115;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:15:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   297
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.549300  Lock_time: 0.000367  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 498
+SET timestamp=1411982123;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:15:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   299
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.548913  Lock_time: 0.000450  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 505
+SET timestamp=1411982131;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:15:38
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   300
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.011782  Lock_time: 0.000969  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0
+# Bytes_sent: 129
+SET timestamp=1411982138;
+select ba_time, sum(ifnull(counts,0)) counts,  sum(ifnull(repayed,0)) repayed from 
+				(
+				 	SELECT ba_all.*, ba_repayed.repayed
+				 	FROM (
+					SELECT DATE_FORMAT(FROM_UNIXTIME(ba_time), '%Y-%m-%d') ba_time, COUNT(0) counts 
+					FROM borrows_accept ba LEFT JOIN borrows b ON ba.bo_id = b.bo_id 
+					WHERE ba.m_id = 864197 AND b.bo_is_success = 1 
+					AND DATE_FORMAT(FROM_UNIXTIME(ba_time), '%Y%m') = '201409' 
+					AND ba.ba_is_transfer in(0,5) 
+					GROUP BY ba.ba_time) ba_all
+					LEFT JOIN 
+					( 
+					SELECT DATE_FORMAT(FROM_UNIXTIME(ba_time), '%Y-%m-%d') ba_time, COUNT(0) repayed 
+					FROM borrows_accept ba LEFT JOIN borrows b ON ba.bo_id = b.bo_id 
+					WHERE ba.m_id = 864197 AND b.bo_is_success = 1 AND ba.ba_is_pay = 1
+					AND DATE_FORMAT(FROM_UNIXTIME(ba_time), '%Y%m') = '201409'
+					AND ba.ba_price>0  
+					GROUP BY ba.ba_time
+					) ba_repayed ON ba_all.ba_time = ba_repayed.ba_time	
+				)t group by t.ba_time ORDER BY t.ba_time;
+# Time: 140929 17:15:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   301
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.514164  Lock_time: 0.005099  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 493
+SET timestamp=1411982139;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:15:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   314
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.597266  Lock_time: 0.024988  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 512
+SET timestamp=1411982155;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   317
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.632237  Lock_time: 0.000340  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 525
+SET timestamp=1411982163;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:04
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   318
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.110948  Lock_time: 0.025328  Rows_sent: 0  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982164;
+SELECT DISTINCT fo.fo_name FROM finance_log fl LEFT JOIN finance_op fo ON fl.fo_id = fo.fo_id
+				LEFT JOIN finance_account fa ON fl.fa_id= fa.fa_id
+				WHERE ( fa.fa_owner_id = '864197' AND fa.fr_id = 7) 
+				UNION
+				SELECT DISTINCT  fo.fo_name FROM finance_log fl LEFT JOIN finance_op fo ON fl.fo_id = fo.fo_id
+				LEFT JOIN finance_account fa ON fl.fa_id= fa.fa_id
+				LEFT JOIN vip_account va ON va.va_id  = fa.fa_owner_id AND fa.fr_id = 13
+				WHERE  (va.m_id = '864197'  AND va.va_id IS NOT NULL);
+# Time: 140929 17:16:05
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   320
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.001251  Lock_time: 0.000513  Rows_sent: 1  Rows_examined: 0  Rows_affected: 0
+# Bytes_sent: 59
+SET timestamp=1411982165;
+SELECT SUM(ba.ba_price_b) total
+				FROM (SELECT bb.bo_id,bb.m_b_id,SUM(bb.bi_price_in) bi_price_in FROM borrows_bidding bb 
+				WHERE bb.m_b_id ='864197' AND bb.is_vip=0 AND bb.bi_state IN(1,2) GROUP BY bb.bo_id)t 
+				LEFT JOIN borrows_accept ba ON ba.bo_id=t.bo_id AND ba.m_id=t.m_b_id
+				LEFT JOIN borrows b ON b.bo_id=t.bo_id
+				WHERE b.bo_is_success=1  AND ba.ba_is_pay=0 AND ba.is_vip=0;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   320
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000695  Lock_time: 0.000192  Rows_sent: 1  Rows_examined: 0  Rows_affected: 0
+# Bytes_sent: 58
+SET timestamp=1411982165;
+SELECT SUM(t.bi_price_in*t.bi_rate)/SUM(t.bi_price_in) rate 
+	 	FROM (SELECT bb.bo_id,bb.m_b_id,SUM(bb.bi_price_in) bi_price_in, bi_rate FROM borrows_bidding bb 
+		WHERE bb.m_b_id ='864197' AND bb.is_vip=0 AND bb.bi_state IN(1,2) GROUP BY bb.bo_id)t 
+		LEFT JOIN borrows_accept ba ON ba.bo_id=t.bo_id AND ba.m_id=t.m_b_id
+		LEFT JOIN borrows b ON b.bo_id=t.bo_id
+		WHERE b.bo_is_success=1  AND ba.ba_is_pay=0;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   320
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.075803  Lock_time: 0.000154  Rows_sent: 1  Rows_examined: 139591  Rows_affected: 0
+# Bytes_sent: 68
+SET timestamp=1411982165;
+SELECT IFNULL(SUM(income_coin-expend_coin),0) total_sum FROM nonocoin_log WHERE m_id='864197';
+# Time: 140929 17:16:11
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   325
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.567484  Lock_time: 0.000576  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 521
+SET timestamp=1411982171;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   330
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.400135  Lock_time: 0.000512  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 506
+SET timestamp=1411982179;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   332
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.567971  Lock_time: 0.001052  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 512
+SET timestamp=1411982181;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:27
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   333
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.579083  Lock_time: 0.001550  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 511
+SET timestamp=1411982187;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:35
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   337
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.560412  Lock_time: 0.001163  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 493
+SET timestamp=1411982195;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   341
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.578719  Lock_time: 0.000414  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 489
+SET timestamp=1411982203;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   344
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.569750  Lock_time: 0.000982  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 523
+SET timestamp=1411982211;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   345
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.573160  Lock_time: 0.000468  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 516
+SET timestamp=1411982211;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:16:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   347
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.561471  Lock_time: 0.006561  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 506
+SET timestamp=1411982219;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   354
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.626770  Lock_time: 0.000486  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 493
+SET timestamp=1411982227;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   360
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.574920  Lock_time: 0.001225  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 502
+SET timestamp=1411982235;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   370
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.593416  Lock_time: 0.002005  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 513
+SET timestamp=1411982241;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   371
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.589428  Lock_time: 0.001303  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 543
+SET timestamp=1411982243;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   376
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.575078  Lock_time: 0.000410  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 519
+SET timestamp=1411982251;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   379
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.611482  Lock_time: 0.001378  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 491
+SET timestamp=1411982259;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   387
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.539914  Lock_time: 0.000448  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 484
+SET timestamp=1411982267;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   389
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.564193  Lock_time: 0.000431  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 491
+SET timestamp=1411982271;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:17:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   391
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.600549  Lock_time: 0.000704  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 523
+SET timestamp=1411982275;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   393
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.383192  Lock_time: 0.001433  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 502
+SET timestamp=1411982283;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:11
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   397
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.376746  Lock_time: 0.000216  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 485
+SET timestamp=1411982291;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:13
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   398
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.026184  Lock_time: 0.001276  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411982293;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:18:13'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:18:14
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   398
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.168227  Lock_time: 0.000477  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411982294;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:18:13'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:18:16
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   400
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.073027  Lock_time: 0.000208  Rows_sent: 1  Rows_examined: 56512  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982296;
+SELECT COUNT(0) FROM borrows_prepare WHERE m_id='864197' 
+					AND bp_is_success = 3 AND DATE_ADD(bp_publish_time,INTERVAL 30 DAY)>NOW();
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   400
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.002117  Lock_time: 0.000266  Rows_sent: 47  Rows_examined: 1261  Rows_affected: 0
+# Bytes_sent: 2827
+SET timestamp=1411982296;
+select * from student_schoole
+					where ss_enable=1 and ss_address='湖南省' order by CONVERT(ss_name USING gbk) ASC;
+# Time: 140929 17:18:17
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   401
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.413776  Lock_time: 0.000361  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 510
+SET timestamp=1411982297;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   403
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.517732  Lock_time: 0.000491  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 505
+SET timestamp=1411982299;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:25
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   405
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.049018  Lock_time: 0.000194  Rows_sent: 1  Rows_examined: 56512  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982305;
+SELECT COUNT(0) FROM borrows_prepare WHERE m_id='864197' 
+					AND bp_is_success = 3 AND DATE_ADD(bp_publish_time,INTERVAL 30 DAY)>NOW();
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   405
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.090367  Lock_time: 0.000434  Rows_sent: 1  Rows_examined: 27666  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982305;
+SELECT COUNT(0) FROM (SELECT COUNT(0) FROM borrows_prepare bp 
+				LEFT JOIN products p on bp.p_id =p.p_id 
+				WHERE p.p_type=3 AND bp.bp_is_success in(0,1)
+				
+				 AND bp.bp_publish_time >= DATE_FORMAT(NOW(),'%Y-%m-%d 12:00:00') AND bp.bp_publish_time < DATE_FORMAT(DATE_ADD(NOW(),INTERVAL 1 DAY),'%Y-%m-%d 12:00:00') GROUP BY bp.m_id)T;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   405
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.094627  Lock_time: 0.000543  Rows_sent: 1  Rows_examined: 27663  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982305;
+SELECT SUM(bp_price_audit) price FROM borrows_prepare bp
+				LEFT JOIN products p on bp.p_id =p.p_id 
+				WHERE p.p_type=3 AND bp.bp_is_success in(0,1)
+				AND bp.bp_publish_time > DATE_FORMAT(NOW(),'%Y-%m-%d 12:00:00')
+				AND bp.bp_publish_time < DATE_FORMAT(DATE_ADD(NOW(),INTERVAL 1 DAY),'%Y-%m-%d 12:00:00');
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   405
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.015786  Lock_time: 0.015607  Rows_sent: 1  Rows_examined: 12  Rows_affected: 0
+# Bytes_sent: 962
+SET timestamp=1411982305;
+select * from student_audit where sa_location_type = '外地' and sa_education = '本科'  and sa_schoole_type = '2';
+# Time: 140929 17:18:26
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   406
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.043512  Lock_time: 0.000133  Rows_sent: 1  Rows_examined: 56513  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982306;
+select count(0) from borrows_prepare where m_id = 864197 and bp_is_success in(0,1);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   406
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.080066  Lock_time: 0.000440  Rows_sent: 1  Rows_examined: 56514  Rows_affected: 0
+# Bytes_sent: 34656
+SET timestamp=1411982306;
+SELECT m.*, d.*, bp.* from  members m
+				LEFT JOIN members_field_details d ON m.m_id =d.m_id
+				LEFT JOIN borrows_prepare bp on bp.m_id = d.m_id
+				WHERE m.m_id = '864197' 
+				AND bp.bp_is_success in(0,1) order by bp_publish_time desc;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   406
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.047547  Lock_time: 0.000280  Rows_sent: 1  Rows_examined: 56513  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982306;
+SELECT COUNT(0) FROM borrows_prepare WHERE m_id='864197' 
+					AND bp_is_success = 3 AND DATE_ADD(bp_publish_time,INTERVAL 30 DAY)>NOW();
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   406
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.186179  Lock_time: 0.001355  Rows_sent: 22  Rows_examined: 95248  Rows_affected: 0
+# Bytes_sent: 987
+SET timestamp=1411982306;
+SELECT  * from euto_banks_n where parent_id is null;
+# Time: 140929 17:18:27
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   407
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.403477  Lock_time: 0.000309  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 502
+SET timestamp=1411982307;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:30
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   408
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.212329  Lock_time: 0.000267  Rows_sent: 1  Rows_examined: 45562  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982310;
+SELECT COUNT(*) FROM finance_bankaccount WHERE banks_account='undefined' AND is_delete != 1;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   408
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.005713  Lock_time: 0.001276  Rows_sent: 0  Rows_examined: 2074  Rows_affected: 0
+# Bytes_sent: 815
+SET timestamp=1411982310;
+select * from bank_info where bi_bin_no = 'undefi';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   408
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.003526  Lock_time: 0.000386  Rows_sent: 0  Rows_examined: 2074  Rows_affected: 0
+# Bytes_sent: 815
+SET timestamp=1411982310;
+select * from bank_info where bi_bin_no = 'undef';
+# Time: 140929 17:18:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   411
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.080025  Lock_time: 0.000265  Rows_sent: 1  Rows_examined: 56514  Rows_affected: 0
+# Bytes_sent: 189
+SET timestamp=1411982311;
+SELECT bp_id,p_id FROM borrows_prepare WHERE bp_is_success in(0,1) AND m_id=864040 order by bp_publish_time desc;
+# Time: 140929 17:18:35
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   412
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.459012  Lock_time: 0.000271  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 506
+SET timestamp=1411982315;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   415
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.505828  Lock_time: 0.000532  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 521
+SET timestamp=1411982323;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   417
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.391552  Lock_time: 0.001257  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 505
+SET timestamp=1411982331;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:18:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   419
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.576388  Lock_time: 0.001344  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 540
+SET timestamp=1411982339;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:19:08
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   422
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.482418  Lock_time: 0.001530  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 507
+SET timestamp=1411982348;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:19:20
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   398
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.026718  Lock_time: 0.001182  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411982360;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:18:13'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:19:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   398
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.170943  Lock_time: 0.000444  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411982361;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:18:13'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   425
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.567827  Lock_time: 0.000343  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 499
+SET timestamp=1411982361;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:19:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   429
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.657978  Lock_time: 0.010492  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 508
+SET timestamp=1411982391;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   431
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.562712  Lock_time: 0.001208  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 517
+SET timestamp=1411982403;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:12
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   434
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.522749  Lock_time: 0.000373  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 496
+SET timestamp=1411982412;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   436
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.525205  Lock_time: 0.000523  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 498
+SET timestamp=1411982419;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:36
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   440
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.558681  Lock_time: 0.000379  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 504
+SET timestamp=1411982436;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   443
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.390300  Lock_time: 0.000531  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 503
+SET timestamp=1411982443;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:44
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   444
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.505516  Lock_time: 0.001121  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 527
+SET timestamp=1411982444;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   448
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.351633  Lock_time: 0.001478  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 526
+SET timestamp=1411982451;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:52
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   450
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.597806  Lock_time: 0.000664  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 488
+SET timestamp=1411982452;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:20:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   452
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.523597  Lock_time: 0.001419  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 495
+SET timestamp=1411982459;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:21:00
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   453
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.511713  Lock_time: 0.000596  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 520
+SET timestamp=1411982460;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:21:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   457
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.357178  Lock_time: 0.000488  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 502
+SET timestamp=1411982467;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:21:08
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   458
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.549687  Lock_time: 0.001480  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 524
+SET timestamp=1411982468;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:21:13
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   463
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.016722  Lock_time: 0.001370  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411982473;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:21:13'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:21:14
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   463
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.123774  Lock_time: 0.000505  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411982474;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:21:13'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:21:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   466
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.376780  Lock_time: 0.001659  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 504
+SET timestamp=1411982481;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:21:24
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   467
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.381493  Lock_time: 0.000334  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 526
+SET timestamp=1411982484;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:21:40
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   470
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.433670  Lock_time: 0.001437  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411982500;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:22:11
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   474
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.576924  Lock_time: 0.000538  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 499
+SET timestamp=1411982531;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:22:36
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   477
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.546340  Lock_time: 0.009133  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 506
+SET timestamp=1411982556;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:22:43
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   479
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.448774  Lock_time: 0.000326  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 491
+SET timestamp=1411982563;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:22:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   463
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.032347  Lock_time: 0.004699  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411982567;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:21:13'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:22:48
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   463
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.178076  Lock_time: 0.000547  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411982568;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:21:13'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:22:52
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   482
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.541386  Lock_time: 0.000322  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 503
+SET timestamp=1411982572;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:22:59
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   484
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.545689  Lock_time: 0.000475  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 493
+SET timestamp=1411982579;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:07
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   487
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.427885  Lock_time: 0.000345  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 525
+SET timestamp=1411982587;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:14
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   463
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.026358  Lock_time: 0.005528  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411982594;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:21:13'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:23:15
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   463
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.195696  Lock_time: 0.000563  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411982595;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:21:13'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   489
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.366768  Lock_time: 0.000282  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 514
+SET timestamp=1411982595;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   491
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.387280  Lock_time: 0.001300  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 513
+SET timestamp=1411982601;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:23
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   493
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.046057  Lock_time: 0.000104  Rows_sent: 1  Rows_examined: 56513  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982603;
+SELECT COUNT(0) FROM borrows_prepare WHERE m_id='864197' 
+					AND bp_is_success = 3 AND DATE_ADD(bp_publish_time,INTERVAL 30 DAY)>NOW();
+# Time: 140929 17:23:24
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   494
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.415556  Lock_time: 0.000495  Rows_sent: 20  Rows_examined: 97572  Rows_affected: 0
+# Bytes_sent: 1289
+SET timestamp=1411982604;
+SELECT m.m_username,mfd.institution,mfd.realname,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id
+				LEFT JOIN borrows b ON b.m_id=m.m_id
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL ORDER BY m.time DESC LIMIT 20;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   494
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.069592  Lock_time: 0.000210  Rows_sent: 1  Rows_examined: 56513  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982604;
+SELECT COUNT(0) FROM borrows_prepare WHERE m_id='864197' 
+					AND bp_is_success = 3 AND DATE_ADD(bp_publish_time,INTERVAL 30 DAY)>NOW();
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   494
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.047468  Lock_time: 0.000115  Rows_sent: 1  Rows_examined: 56513  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982604;
+SELECT count(0) FROM borrows_prepare WHERE bp_is_success=0 AND m_id= '864197';
+# Time: 140929 17:23:31
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   496
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.575250  Lock_time: 0.000439  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 519
+SET timestamp=1411982611;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:32
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   497
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.046716  Lock_time: 0.000116  Rows_sent: 1  Rows_examined: 56513  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982612;
+SELECT COUNT(0) FROM borrows_prepare WHERE m_id='864197' 
+					AND bp_is_success = 3 AND DATE_ADD(bp_publish_time,INTERVAL 30 DAY)>NOW();
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   497
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.065955  Lock_time: 0.000322  Rows_sent: 1  Rows_examined: 27667  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982612;
+SELECT COUNT(0) FROM (SELECT COUNT(0) FROM borrows_prepare bp 
+				LEFT JOIN products p on bp.p_id =p.p_id 
+				WHERE p.p_type=3 AND bp.bp_is_success in(0,1)
+				
+				 AND bp.bp_publish_time >= DATE_FORMAT(NOW(),'%Y-%m-%d 12:00:00') AND bp.bp_publish_time < DATE_FORMAT(DATE_ADD(NOW(),INTERVAL 1 DAY),'%Y-%m-%d 12:00:00') GROUP BY bp.m_id)T;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   497
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.064886  Lock_time: 0.000336  Rows_sent: 1  Rows_examined: 27664  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982612;
+SELECT SUM(bp_price_audit) price FROM borrows_prepare bp
+				LEFT JOIN products p on bp.p_id =p.p_id 
+				WHERE p.p_type=3 AND bp.bp_is_success in(0,1)
+				AND bp.bp_publish_time > DATE_FORMAT(NOW(),'%Y-%m-%d 12:00:00')
+				AND bp.bp_publish_time < DATE_FORMAT(DATE_ADD(NOW(),INTERVAL 1 DAY),'%Y-%m-%d 12:00:00');
+# Time: 140929 17:23:33
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   498
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.064899  Lock_time: 0.000175  Rows_sent: 1  Rows_examined: 56514  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982613;
+select count(0) from borrows_prepare where m_id = 864197 and bp_is_success in(0,1);
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   498
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.079581  Lock_time: 0.000366  Rows_sent: 1  Rows_examined: 56515  Rows_affected: 0
+# Bytes_sent: 34678
+SET timestamp=1411982613;
+SELECT m.*, d.*, bp.* from  members m
+				LEFT JOIN members_field_details d ON m.m_id =d.m_id
+				LEFT JOIN borrows_prepare bp on bp.m_id = d.m_id
+				WHERE m.m_id = '864197' 
+				AND bp.bp_is_success in(0,1) order by bp_publish_time desc;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   498
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.062264  Lock_time: 0.000424  Rows_sent: 1  Rows_examined: 56514  Rows_affected: 0
+# Bytes_sent: 63
+SET timestamp=1411982613;
+SELECT COUNT(0) FROM borrows_prepare WHERE m_id='864197' 
+					AND bp_is_success = 3 AND DATE_ADD(bp_publish_time,INTERVAL 30 DAY)>NOW();
+# Time: 140929 17:23:37
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   501
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.071583  Lock_time: 0.000102  Rows_sent: 1  Rows_examined: 56515  Rows_affected: 0
+# Bytes_sent: 189
+SET timestamp=1411982617;
+SELECT bp_id,p_id FROM borrows_prepare WHERE bp_is_success in(0,1) AND m_id=864197 order by bp_publish_time desc;
+# Time: 140929 17:23:39
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   503
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.627267  Lock_time: 0.000325  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 517
+SET timestamp=1411982619;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:40
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   504
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.390721  Lock_time: 0.000328  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 513
+SET timestamp=1411982620;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:47
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   509
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.544964  Lock_time: 0.002659  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 494
+SET timestamp=1411982627;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:48
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   510
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.503629  Lock_time: 0.000323  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 498
+SET timestamp=1411982628;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:51
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   511
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.571397  Lock_time: 0.002273  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 506
+SET timestamp=1411982631;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:55
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   514
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.396113  Lock_time: 0.000444  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 499
+SET timestamp=1411982635;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:23:56
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   515
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.394964  Lock_time: 0.000500  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 505
+SET timestamp=1411982636;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:24:03
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   516
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.551023  Lock_time: 0.001218  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 521
+SET timestamp=1411982643;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:24:04
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   517
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.421113  Lock_time: 0.000465  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 516
+SET timestamp=1411982644;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:24:11
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   520
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.592504  Lock_time: 0.000975  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 519
+SET timestamp=1411982651;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:24:12
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   521
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.426155  Lock_time: 0.000361  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 511
+SET timestamp=1411982652;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:24:13
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   522
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.024154  Lock_time: 0.001178  Rows_sent: 0  Rows_examined: 22951  Rows_affected: 0
+# Bytes_sent: 490
+SET timestamp=1411982653;
+SELECT 1 as type,m.m_id,m.m_username,m.m_key,m.m_avatar_b,vf.vf_amount,vf.vf_service_time,vf.fp_id FROM vip_form vf
+				LEFT JOIN members m ON vf.m_id =m.m_id
+				WHERE vf.vf_amount_payed>0 AND vf.vf_service_time > '2014-09-29 17:24:13'  ORDER BY vf_service_time DESC;
+# Time: 140929 17:24:14
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   522
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.147755  Lock_time: 0.000312  Rows_sent: 0  Rows_examined: 181765  Rows_affected: 0
+# Bytes_sent: 963
+SET timestamp=1411982654;
+SELECT 2 as type,dbl.*,m.m_id,m.m_key
+		FROM debt_buy_log dbl
+		LEFT JOIN debt_sale ds ON ds.ds_id=dbl.ds_id
+		LEFT JOIN members m ON m.m_id = dbl.m_id
+		LEFT JOIN members_field_details mfd ON mfd.m_id = dbl.m_id
+		WHERE ds.ds_status=3 AND ds.ds_residue_count>0	AND dbl.dbl_time > '2014-09-29 17:24:13'
+		GROUP BY dbl.m_id ORDER BY dbl.dbl_time LIMIT 3;
+# Time: 140929 17:24:19
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   525
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.392213  Lock_time: 0.000471  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 501
+SET timestamp=1411982659;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:24:21
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   526
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.601425  Lock_time: 0.000470  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 505
+SET timestamp=1411982661;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;
+# Time: 140929 17:24:27
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:   527
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.495927  Lock_time: 0.006655  Rows_sent: 4  Rows_examined: 97523  Rows_affected: 0
+# Bytes_sent: 511
+SET timestamp=1411982667;
+SELECT m.m_username,mfd.realname,mfd.institution,b.bo_price FROM members m LEFT JOIN
+				members_field_details mfd ON m.m_id=mfd.m_id  
+				LEFT JOIN borrows b ON b.m_id=m.m_id 
+				WHERE m.m_borrow_type='学生' AND b.bo_price IS NOT NULL AND mfd.institution IS NOT NULL  ORDER BY RAND() LIMIT 4;

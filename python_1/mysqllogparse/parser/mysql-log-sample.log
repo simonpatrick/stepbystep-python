@@ -1,0 +1,49 @@
+/usr/sbin/mysqld, Version: 5.6.20-68.0-56-log (Percona XtraDB Cluster (GPL), Release 25.7, wsrep_25.7.r4126). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 140917 14:59:33
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    18
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.003148  Lock_time: 0.002629  Rows_sent: 164  Rows_examined: 164  Rows_affected: 0
+# Bytes_sent: 11654
+use db_nonobank;
+SET timestamp=1410937173;
+SELECT * FROM admin_menus WHERE available=1;
+# Time: 140917 15:00:34
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    42
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.376145  Lock_time: 0.375823  Rows_sent: 1  Rows_examined: 17  Rows_affected: 0
+# Bytes_sent: 64
+SET timestamp=1410937234;
+SELECT max(allow_time) allow_time FROM `admin_ip_blacklist` WHERE `ip`='192.168.17.196' and `m_id`='0';
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    42
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000926  Lock_time: 0.000811  Rows_sent: 1  Rows_examined: 1  Rows_affected: 0
+# Bytes_sent: 813
+SET timestamp=1410937234;
+SELECT s_name,s_keywords,s_des,s_mix_bid,s_checkcode_enbale,s_fraud_times FROM sites;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    42
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.001079  Lock_time: 0.000878  Rows_sent: 23  Rows_examined: 57  Rows_affected: 0
+# Bytes_sent: 1142
+SET timestamp=1410937234;
+SELECT links_url,links_name FROM links WHERE cat_id = 0 ORDER BY sort ASC;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    42
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.000191  Lock_time: 0.000074  Rows_sent: 7  Rows_examined: 41  Rows_affected: 0
+# Bytes_sent: 395
+SET timestamp=1410937234;
+SELECT links_url,links_name FROM links WHERE cat_id = 2 ORDER BY sort ASC;
+# User@Host: nonobank[nonobank] @  [192.168.1.60]  Id:    42
+# Schema: db_nonobank  Last_errno: 0  Killed: 0
+# Query_time: 0.005128  Lock_time: 0.003426  Rows_sent: 30  Rows_examined: 134  Rows_affected: 0
+# Bytes_sent: 1442
+SET timestamp=1410937234;
+SELECT bb.bi_price_in,bi_pay_time,m.m_username 
+				FROM borrows_bidding bb 
+				LEFT JOIN borrows bo ON bo.bo_id=bb.bo_id 
+				LEFT JOIN members m ON bb.m_b_id =m.m_id 
+				WHERE bb.bi_state IN(1,2) 
+				AND bb.bo_reason <>'[自动投标]' 
+				ORDER BY bi_pay_time DESC 
+				Limit 30
