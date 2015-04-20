@@ -11,4 +11,5 @@ def info(object, spacing=10, collapse=1):
 
 
 if __name__ == "__main__":
+
     print help.__doc__

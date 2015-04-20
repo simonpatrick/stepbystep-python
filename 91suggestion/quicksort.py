@@ -16,5 +16,6 @@ def quick_sort(array):
 
     return quick_sort(less) + [pivot] + quick_sort(great)
 
-if __name__=='__main__':
-    print quick_sort([11,32,30,4,5,7,9,0,100])
+
+if __name__ == '__main__':
+    print quick_sort([11, 32, 30, 4, 5, 7, 9, 0, 100])
