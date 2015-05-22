@@ -17,19 +17,20 @@ _HEADER_SERVER_CRE = re.compile(r"Tcp port:\s*(\d+)\s+Unix socket:\s+(.*)")
 
 _SLOW_TIMESTAMP_CRE = re.compile(r"#\s+Time:\s+(" + _DATE_PAT + r")")
 _SLOW_USERHOST_CRE = re.compile(r"#\s+User@Host:\s+"
-                       r"(?:([\w\d]+))?\s*"
-                       r"\[\s*([\w\d]+)\s*\]\s*"
-                       r"@\s*"
-                       r"([\w\d]*)\s*"
-                       r"\[\s*([\d.]*)\s*\]")
+                                r"(?:([\w\d]+))?\s*"
+                                r"\[\s*([\w\d]+)\s*\]\s*"
+                                r"@\s*"
+                                r"([\w\d]*)\s*"
+                                r"\[\s*([\d.]*)\s*\]")
 _SLOW_STATS_CRE = re.compile(r"#\sQuery_time:\s(\d*\.\d{1,6})\s*"
-            r"Lock_time:\s(\d*\.\d{1,6})\s*"
-            r"Rows_sent:\s(\d*)\s*"
-            r"Rows_examined:\s(\d*)")
+                             r"Lock_time:\s(\d*\.\d{1,6})\s*"
+                             r"Rows_sent:\s(\d*)\s*"
+                             r"Rows_examined:\s(\d*)")
 
 _GENERAL_ENTRY_CRE = re.compile(
-            r'(?:('+ _DATE_PAT +'))?\s*'
-            r'(\d+)\s([\w ]+)\t*(?:(.+))?$')
+    r'(?:(' + _DATE_PAT + '))?\s*'
+                          r'(\d+)\s([\w ]+)\t*(?:(.+))?$')
+
 
 class LogParserBase(object):
     """Base class for parsing MySQL log files
@@ -45,6 +46,7 @@ class LogParserBase(object):
     This class should not be used directly, but inhereted and extended to
     match the log file which needs to be parsed.
     """
+
     def __init__(self, stream):
         """Constructor
 
@@ -72,13 +74,13 @@ class LogParserBase(object):
             line = self._get_next_line()
         except AttributeError:
             raise LogParserError("Need a file type")
-        
+
         # Not every log file starts with a header
         if line is not None and line.endswith('started with:'):
             self._parse_header(line)
         else:
             self._stream.seek(0)
-    
+
     def _get_next_line(self):
         """Get next line from the log file
 
@@ -91,7 +93,7 @@ class LogParserBase(object):
         if not line:
             return None
         return line.rstrip('\r\n')
-    
+
     def _parse_header(self, line):
         """Parse the header of a MySQL log file
 
@@ -153,7 +155,7 @@ class LogParserBase(object):
 
         Returns a tuple or None.
         """
-        return self._version 
+        return self._version
 
     @property
     def program(self):
@@ -167,7 +169,7 @@ class LogParserBase(object):
         Returns a string or None.
         """
         return self._program
-    
+
     @property
     def port(self):
         """Returns the MySQL server TCP/IP port
@@ -180,7 +182,7 @@ class LogParserBase(object):
         Returns an integer or None.
         """
         return self._port
-    
+
     @property
     def socket(self):
         """Returns the MySQL server UNIX socket
@@ -193,7 +195,7 @@ class LogParserBase(object):
         Returns a string or None.
         """
         return self._socket
-    
+
     @property
     def start_datetime(self):
         """Returns timestamp of first read log entry
@@ -203,7 +205,7 @@ class LogParserBase(object):
         Returns datetime.datetime-object or None.
         """
         return self._start_datetime
-    
+
     @property
     def last_seen_datetime(self):
         """Returns timestamp of last read log entry
@@ -213,14 +215,14 @@ class LogParserBase(object):
         Returns datetime.datetime-object or None
         """
         return self._last_seen_datetime
-    
+
     def __iter__(self):
         """Class is iterable
         
         Returns a LogParserBase-object.
         """
         return self
-    
+
     def next(self):
         """Returns the next log entry
 
@@ -238,9 +240,10 @@ class LogParserBase(object):
         """
         return "<%(clsname)s, MySQL v%(version)s>" % dict(
             clsname=self.__class__.__name__,
-            version='.'.join([ str(v) for v in self._version[0:3]])+
-                (self._version[3] or '')
-            )
+            version='.'.join([str(v) for v in self._version[0:3]]) +
+                    (self._version[3] or '')
+        )
+
 
 class GeneralQueryLog(LogParserBase):
     """Class implementing a parser for the MySQL General Query Log
@@ -252,6 +255,7 @@ class GeneralQueryLog(LogParserBase):
     - Keep track of MySQL sessions and remove them
     - Process log headers found later in the log file
     """
+
     def __init__(self, stream):
         """Constructor
 
@@ -264,7 +268,7 @@ class GeneralQueryLog(LogParserBase):
         self._cached_logentry = None
 
         self._commands = {
-            #'Sleep': None, 
+            # 'Sleep': None,
             'Quit': self._handle_quit,
             'Init DB': self._handle_init_db,
             'Query': self._handle_multi_line,
@@ -296,7 +300,7 @@ class GeneralQueryLog(LogParserBase):
             #'Daemon': None,
             #'Error': None,
         }
-    
+
     def _new_session(self, session_id):
         """Create a new session using the given session ID
 
@@ -305,13 +309,13 @@ class GeneralQueryLog(LogParserBase):
         Returns a dictionary.
         """
         self._sessions[session_id] = dict(
-                database=None,
-                user=None,
-                host=None,
-                time_last_action=None,
-                to_delete=False)
+            database=None,
+            user=None,
+            host=None,
+            time_last_action=None,
+            to_delete=False)
         return self._sessions[session_id]
-    
+
     def _handle_connect(self, entry, session, argument):
         """Handle a 'Connect'-command
 
@@ -331,8 +335,8 @@ class GeneralQueryLog(LogParserBase):
         try:
             connection, garbage, database = argument.split(' ')
         except ValueError:
-            connection = argument.replace(' on','')
-            database = None    
+            connection = argument.replace(' on', '')
+            database = None
         session['user'], session['host'] = connection.split('@')
         session['database'] = database
         entry['argument'] = argument
@@ -348,7 +352,7 @@ class GeneralQueryLog(LogParserBase):
         The argument parameter is always the database name.
         """
         # Example (of full line):
-        #           3 Init DB   mysql
+        # 3 Init DB   mysql
         session['database'] = argument
         entry['argument'] = argument
 
@@ -370,7 +374,7 @@ class GeneralQueryLog(LogParserBase):
         # 111205 10:01:14       6 Query SELECT Name FROM time_zone_name WHERE Time_zone_id = 417
         # 111205 10:03:28       6 Query SELECT Name FROM time_zone_name
         # WHERE Time_zone_id = 417
-        argument_parts = [argument,]
+        argument_parts = [argument, ]
         line = self._get_next_line()
         while line:
             if line.endswith('started with:'):
@@ -382,9 +386,9 @@ class GeneralQueryLog(LogParserBase):
                 break
             argument_parts.append(line)
             line = self._get_next_line()
-        
+
         entry['argument'] = '\n'.join(argument_parts)
-    
+
     def _handle_quit(self, entry, session, argument):
         """Handle the 'Quit'-command
 
@@ -430,7 +434,7 @@ class GeneralQueryLog(LogParserBase):
         else:
             info = _GENERAL_ENTRY_CRE.match(logentry)
             if info is None:
-                raise LogParserError("Failed parsing command line: %s"\
+                raise LogParserError("Failed parsing command line: %s" \
                                      % logentry)
             dt, session_id, command, argument = info.groups()
         self._cached_logentry = None
@@ -449,23 +453,23 @@ class GeneralQueryLog(LogParserBase):
             session['time_last_action'] = entry['datetime']
         else:
             entry['datetime'] = session['time_last_action']
-        
+
         try:
             self._commands[command](entry, session, argument)
         except KeyError:
             # Generic command
             entry['argument'] = argument
-        
+
         for key in entry.keys():
             if key in session:
                 entry[key] = session[key]
-        
+
         if session['to_delete'] is True:
             del self._sessions[session_id]
             del session
 
         return entry
-        
+
     def _parse_entry(self):
         """Returns a parsed log entry
 
@@ -476,15 +480,16 @@ class GeneralQueryLog(LogParserBase):
         """
         entry = GeneralQueryLogEntry()
         if self._cached_logentry is not None:
-            self._parse_command(self._cached_logentry,entry)
+            self._parse_command(self._cached_logentry, entry)
             return entry
         else:
             line = self._get_next_line()
         if line is None:
             return None
 
-        self._parse_command(line,entry)
+        self._parse_command(line, entry)
         return entry
+
 
 class SlowQueryLog(LogParserBase):
     """Class implementing a parser for the MySQL Slow Query Log
@@ -496,6 +501,7 @@ class SlowQueryLog(LogParserBase):
     - Parse connection and temporal information
     - Get statistics of the slow query
     """
+
     def __init__(self, stream):
         """Constructor
 
@@ -511,7 +517,7 @@ class SlowQueryLog(LogParserBase):
         super(SlowQueryLog, self).__init__(stream)
         self._cached_line = None
         self._current_database = None
-    
+
     def _parse_line(self, regex, line):
         """Parses a log line using given regular expression
 
@@ -531,7 +537,7 @@ class SlowQueryLog(LogParserBase):
             raise LogParserError('Failed parsing Slow Query line: %s' %
                                  line[:30])
         return info.groups()
-    
+
     def _parse_connection_info(self, line, entry):
         """Parses connection info
 
@@ -546,7 +552,7 @@ class SlowQueryLog(LogParserBase):
         # Example:
         # # User@Host: root[root] @ localhost [127.0.0.1]
         try:
-            #import pdb;pdb.set_trace()
+            # import pdb;pdb.set_trace()
             (priv_user,
              unpriv_user,
              host,
@@ -579,7 +585,7 @@ class SlowQueryLog(LogParserBase):
         if self._start_datetime is None:
             self._start_datetime = entry['datetime']
             self._last_seen_datetime = entry['datetime']
-    
+
     def _parse_statistics(self, line, entry):
         """Parses statistics information
 
@@ -594,12 +600,12 @@ class SlowQueryLog(LogParserBase):
         # Example statistic line:
         # # Query_time: 0.101194  Lock_time: 0.000331 Rows_sent: 24  Rows_examined: 11624
         result = self._parse_line(_SLOW_STATS_CRE, line)
-        
+
         entry['query_time'] = decimal.Decimal(result[0])
         entry['lock_time'] = decimal.Decimal(result[1])
         entry['rows_sent'] = int(result[2])
         entry['rows_examined'] = int(result[3])
-    
+
     def _parse_query(self, line, entry):
         """Parses the query
 
@@ -616,7 +622,7 @@ class SlowQueryLog(LogParserBase):
         # Example:
         # SET timestamp=1323169459;
         # SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA 
-        #    WHERE SCHEMA_NAME = 'mysql';
+        # WHERE SCHEMA_NAME = 'mysql';
         # # User@Host: root[root] @ localhost [127.0.0.1]
         query = []
         while True:
@@ -628,7 +634,7 @@ class SlowQueryLog(LogParserBase):
                 entry['datetime'] = datetime.datetime.fromtimestamp(
                     int(line[14:].strip(';')))
             elif (line.startswith('# Time:') or line.startswith("# User@Host")
-                or line.endswith('started with:')):
+                  or line.endswith('started with:')):
                 break
             query.append(line)
             line = self._get_next_line()
@@ -687,8 +693,9 @@ class SlowQueryLog(LogParserBase):
             line = self._get_next_line()
 
         self._parse_query(line, entry)
-        
+
         return entry
+
 
 class LogEntryBase(dict):
     """Class inherited by GeneralQueryEntryLog and SlowQueryEntryLog
@@ -700,23 +707,26 @@ class LogEntryBase(dict):
 
     Should not be used directly.
     """
+
     def __init__(self):
         self['datetime'] = None
         self['database'] = None
         self['user'] = None
         self['host'] = None
-    
+
     def __getattr__(self, name):
         if name in self:
             return self[name]
         else:
             raise AttributeError("%s has no attribute '%s'" % (
-                                 self.__class__.__name__,name))
+                self.__class__.__name__, name))
+
 
 class GeneralQueryLogEntry(LogEntryBase):
     """Class representing an entry of the General Query Log
 
     """
+
     def __init__(self):
         """Constructor
 
@@ -724,7 +734,7 @@ class GeneralQueryLogEntry(LogEntryBase):
         dict. Instances of GeneralQueryLogEntry can be used just like
         dictionaries.
         """
-        super(GeneralQueryLogEntry,self).__init__()
+        super(GeneralQueryLogEntry, self).__init__()
         self['session_id'] = None
         self['command'] = None
         self['argument'] = None
@@ -738,7 +748,7 @@ class GeneralQueryLogEntry(LogEntryBase):
             if len(param['argument']) > 30:
                 param['argument'] = param['argument'][:28] + '..'
         except TypeError:
-            pass # Nevermind when param['argument'] was not a string.
+            pass  # Nevermind when param['argument'] was not a string.
         try:
             param['datetime'] = param['datetime'].strftime("%Y-%m-%d %H:%M:%S")
         except AttributeError:
@@ -746,16 +756,18 @@ class GeneralQueryLogEntry(LogEntryBase):
         return ("<%(clsname)s %(datetime)s [%(session_id)s]"
                 " %(command)s: %(argument)s>" % param)
 
+
 class SlowQueryLogEntry(LogEntryBase):
     """Class representing an entry of the Slow Query Log
 
     SlowQueryLogEntry inherits from LogEntryBase, which inherits from dict.
     Instances of SlowQueryLogEntry can be used just like dictionaries.
     """
+
     def __init__(self):
         """Constructor
         """
-        super(SlowQueryLogEntry,self).__init__()
+        super(SlowQueryLogEntry, self).__init__()
         self['query'] = None
         self['query_time'] = None
         self['lock_time'] = None
