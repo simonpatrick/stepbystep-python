@@ -8,6 +8,7 @@ import decimal
 import datetime
 
 # from exception import LogParserError
+from works.mysqllogparse.parser.exception import LogParserError
 
 _DATE_PAT = r"\d{6}\s+\d{1,2}:\d{2}:\d{2}"
 

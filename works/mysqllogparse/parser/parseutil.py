@@ -2,7 +2,9 @@
 
 import re
 import string
-from slowlogdao import SlowLogDAO
+
+from works.mysqllogparse.parser.slowlogdao import SlowLogDAO
+
 
 _DATE_PAT = r"\d{6}\s+\d{1,2}:\d{2}:\d{2}"
 
