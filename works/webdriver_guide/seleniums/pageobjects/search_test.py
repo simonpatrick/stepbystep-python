@@ -1,7 +1,8 @@
 # _*_ coding=utf-8 _*_
 __author__ = 'patrick'
 import unittest
-from pages.homepage import HomePage
+
+from works.webdriver_guide.seleniums.pageobjects.pages.homepage import HomePage
 from base.basetestcase import BaseTestCase
 
 

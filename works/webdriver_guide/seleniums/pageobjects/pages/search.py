@@ -1,8 +1,8 @@
 # _*_ coding=utf-8 _*_
 __author__ = 'patrick'
-from basepage import BasePage
-from basepage import InvalidPageException
-from product import ProductPage
+from works.webdriver_guide.seleniums.pageobjects.pages.basepage import BasePage
+from works.webdriver_guide.seleniums.pageobjects.pages.basepage import InvalidPageException
+from works.webdriver_guide.seleniums.pageobjects.pages.product import ProductPage
 
 
 class SearchRegion(BasePage):
