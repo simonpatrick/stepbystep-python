@@ -1,5 +1,5 @@
 rr_id="123"
-file_lists="123,444,555674,123,444,555674,0090098765,123,444,555674,0090098765"
+file_lists="0090098765,123,555674,00989,444"
 target_user="110863"
 description="description"
-summary="summarysummary revised"
+summary="summarysummary revisedsummary revisedsummary revisedsummary revisedsummary revisedsummary revisedsummary revised"

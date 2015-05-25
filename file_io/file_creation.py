@@ -14,12 +14,16 @@ def write_dict(file_lists):
     notes['summary']=config['summary']+'summary revised'
     notes['description']=config['description']
     notes['target_user']=config['target_user']
+    print type(file_lists)
     try:
         original_file = config['file_lists'].split(',')
+        print type(original_file)
+        original_file.extend(file_lists)
+        print original_file
     except KeyError :
         original_file=[]
 
-    original_file.extend(file_lists)
+    original_file = list(set(original_file+file_lists))
     notes['file_lists']=','.join(original_file)
 
     with open('notes.txt','w') as f:
@@ -36,4 +40,4 @@ def read_properties():
     return config
 
 if __name__ == '__main__':
-    write_dict(['123','444','555674','0090098765'])
+    write_dict(['123','444','00989','555674','0090098765'])
