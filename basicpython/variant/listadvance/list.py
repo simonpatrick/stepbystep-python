@@ -15,7 +15,6 @@ print range(3,100,3)
 print [one.strip() for one in ["1232","  345  ","  33 445"]]
 
 # enumerate
-
 seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 print list(enumerate(seasons))
 
@@ -24,7 +23,6 @@ def beatify(pos, element):
     return "%d:%s"%(pos,element)
 
 print [beatify(i,element) for i,element in enumerate(seasons)]
-
 # enumerate with lamba
 func= lambda i,element:"%d:%s"%(i,element)
 print [func(i,element) for i,element in enumerate(seasons)]
