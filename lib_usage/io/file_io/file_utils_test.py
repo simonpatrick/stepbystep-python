@@ -1,7 +1,9 @@
 # _*_ coding=utf-8 _*_
 import os
 from unittest import TestCase
-from file_io.file_utils import SVNRBTLogs
+
+from lib_usage.io.file_io.file_utils import SVNRBTLogs
+
 
 __author__ = 'patrick'
 

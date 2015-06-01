@@ -1,6 +1,8 @@
 # _*_ coding=utf-8 _*_
 import sys
-from cache.simplecache.container import Container
+
+from datastructure.cache.simplecache.container import Container
+
 
 __author__ = 'patrick'
 

@@ -44,7 +44,8 @@ print string.__getattr__("lowercase")
 print string.lowercase
 #todo to understand why
 
-import hello
+from basicpython.build_in_note.buildin import hello
+
 reload(hello)
 
 

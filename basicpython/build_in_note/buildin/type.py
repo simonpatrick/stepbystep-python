@@ -33,7 +33,7 @@ print len(load("namespace.py")),"bytes"
 print len(load(open("namespace.py","rb"))),"bytes"
 
 #__callable__gi
-from namespace import *
+from basicpython.build_in_note.buildin.namespace import *
 
 def dump_1(function):
     if callable(function):
