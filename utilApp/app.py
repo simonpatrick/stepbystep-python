@@ -4,25 +4,23 @@ import requests
 
 __author__ = 'patrick'
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-username = "****"
-password = "****"
-
+username = "110863"
+password = "PW_123456"
 
 @app.route("/")
-def hello_world():
-    return "hello_world"
-
+def index():
+    return render_template("index.html")
 
 @app.route("/getPassword")
 def get_integration_password():
     s = requests.Session()
-    login_url = "http://login.***.org/login?usercode=%s&password=%s" % (username, password)
+    login_url = "http://login.dooioo.org/login?usercode=%s&password=%s" % (username, password)
     r = s.post(login_url, verify=False)
-    get_password_url = "http://login.***.org/rootPassword/get"
+    get_password_url = "http://login.dooioo.org/rootPassword/get"
     login_cookie = r.cookies
     r = s.get(get_password_url, cookies=login_cookie, verify=False)
     pattern = re.compile(r'【(.*)】')
