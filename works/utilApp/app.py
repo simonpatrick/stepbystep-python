@@ -27,7 +27,6 @@ def get_integration_password():
     match = pattern.findall(r.content)
     return match[0]
 
-
 @app.route("/setUserCode/<user_code>")
 def set_user_code(user_code):
     username = user_code
@@ -44,7 +43,6 @@ def init(user_code,pwd):
     username=user_code
     password=pwd
     return username+":"+password
-
 
 if __name__ == '__main__':
     app.run(debug=True)
