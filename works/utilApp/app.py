@@ -20,11 +20,12 @@ def get_integration_password():
     s = requests.Session()
     login_url = "http://login.dooioo.org/login?usercode=%s&password=%s" % (username, password)
     r = s.post(login_url, verify=False)
-    get_password_url = "http://login.dooioo.org/rootPassword/get"
+    get_password_url = "https://login.dooioo.org/rootPassword/get"
     login_cookie = r.cookies
     r = s.get(get_password_url, cookies=login_cookie, verify=False)
     pattern = re.compile(r'【(.*)】')
     match = pattern.findall(r.content)
+    if(len(match)<=0):return "获取万能密码失败。。。。。。。"
     return match[0]
 
 @app.route("/setUserCode/<user_code>")
