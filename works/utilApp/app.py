@@ -9,7 +9,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 username = "110863"
-password = "PW_654321"
+password = "********"
 
 @app.route("/")
 def index():
