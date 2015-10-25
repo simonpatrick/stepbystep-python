@@ -27,7 +27,7 @@
 
 # Mongo Explorer plugin:
 # .idea/mongoSettings.xml
-
+node_modules/
 ## File-based project format:
 *.ipr
 *.iws
