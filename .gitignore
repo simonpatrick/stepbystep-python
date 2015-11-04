@@ -31,7 +31,7 @@ node_modules/
 ## File-based project format:
 *.ipr
 *.iws
-
+git_user.configuration.sh
 ## Plugin-specific files:
 
 # IntelliJ
