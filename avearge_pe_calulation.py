@@ -47,4 +47,4 @@ output['创业板平均市盈率'] = output['market_value'] / output['净利润'
 
 # 算好的数据输出
 output.to_csv('创业板平均市盈率.csv', encoding='gbk') # 注意：这里请填写数据文件在您电脑中的路径
-print output
+print(output)
