@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if [ $# -eq 0 ]; then
 	cat << HELP
 Usage: run.sh LOGPATH [filename]
