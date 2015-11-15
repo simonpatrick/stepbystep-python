@@ -5,12 +5,12 @@ __author__ = 'patrick'
 
 class MyTests(unittest.TestCase):
     def test_average(self):
-        print "my Tests"
+        print("my Tests")
         pass
 
 class MyTest2(unittest.TestCase):
     def test_another_test(self):
-        print "My Test2"
+        print("My Test2")
         pass
 
 def test_suite():
