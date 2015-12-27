@@ -1,10 +1,8 @@
-__author__ = 'patrick'
 
 class Parameter:
+    val_count = 0
 
-    val_count =0
-
-    def __init__(self,string_declaration):
+    def __init__(self, string_declaration):
         tokens = string_declaration.split(':')
         self.name = tokens[0]
         self.value_names = tokens[1].split(',')

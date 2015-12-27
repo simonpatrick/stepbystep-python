@@ -1,6 +1,4 @@
-
 class TestCase(object):
-
     def __init__(self, parameters):
         """
         :param parameters: A list containing TestFactor objects
@@ -10,7 +8,6 @@ class TestCase(object):
         self.tc_len = len(parameters)
         self.tc_array = [None] * self.tc_len
         self.val_to_index_map = dict()
-
 
         for val_list, count in zip([component.get_values_list() for component in self.components], range(self.tc_len)):
             for value in val_list:
@@ -39,4 +36,4 @@ class TestCase(object):
         return [val for val in self.tc_array if val is not None]
 
     def __repr__(self):
-        pass #TODO
+        pass  # TODO
