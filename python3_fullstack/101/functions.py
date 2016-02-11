@@ -1,3 +1,6 @@
+import random
+
+
 def telling_truth():
     print('Telling truth')
 
@@ -20,3 +23,13 @@ def this_year():
 
 lambda_function=lambda param:param*param
 print(lambda_function(10))
+
+
+email = "test"+str(random.randint(0,1000))+"@flask.com"
+print(email)
+add_date = """
+    {"test":{user_email}
+    "type": "users"}}
+    """
+print(add_date)
+
