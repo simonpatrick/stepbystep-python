@@ -23,7 +23,7 @@ class CrazyDog(Dog):
         print('using setattr set value')
         print(key, value)
         # super().__setattr__(key, value)
-        setattr(self,key,value)
+        setattr(self, key, value)
 
 
 class Danger():
